@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "selkashita-ctxpoison"
+version = "0.1.0"
+description = "在检索片段中查找越权指令、角色切换与格式劫持等模式并定位"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "selkashita" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://selkashita.github.io"
+Repository = "https://github.com/selkashita/ctxpoison"
+Issues = "https://github.com/selkashita/ctxpoison/issues"
+
+[project.scripts]
+ctxpoison = "ctxpoison:main"
+
+[tool.setuptools]
+py-modules = ["ctxpoison"]
